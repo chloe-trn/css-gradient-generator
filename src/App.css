@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+*{
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  display: flex;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gradient{
+  flex-grow: 1;
+  height: 100vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.controls{
+  height: 100vh;
+  width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+  padding: 20px 25px;
+  background: rgb(240,240,240);
+  background: linear-gradient(-170deg, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 100%);
+}
+.css-output{
+  background: #313436;
+  width: 100%;
+  height: 350px;
+  border-radius: 3px;
   color: white;
+  padding: 30px;
+  font-size: 17px;
+  line-height: 2.5;
+  cursor: copy;
+}
+.colors-control{
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.color{
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.percent,.color-choose,.hex-display,.percent{
+   height: 40px;
+   text-align: center;
+   border-radius: 2px; 
+   font-size: 15px;
+}
+.percent{
+  width: 45px;
+  border: 1px solid #cdd2d6;
+}
+.color-choose, .hex-display{
+  background: rgb(252, 249, 249);
+  margin-left: 15px;
+  border: 1px solid #cdd2d6;
+}
+.color-choose{
+  width: 210px;
+  cursor: pointer;
+}
+.hex-display{
+  width: 110px;
+  cursor: not-allowed;
+}
+.hex-display:focus{
+  outline: none;
+}
+.delete{
+  color: #313436;
+  font-size: 30px;
+  margin-left: 20px;
+}
+@media screen and (max-width: 768px) {
+  h1{
+    margin-bottom: 40px;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .gradient{
+    height: 45vh;
+  }
+  .controls{
+    height: 100%;
+    width: 100vw;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    padding: 40px 50px;
+  }
+  .color{
+    margin-bottom: 50px;
+  }
+  .percent,.color-choose,.hex-display{
+   height: 45px;
+  }
+  .percent{
+    height: 45px;
+    width: 50px;
+    font-size: 15px;
+  }
+   .color-choose, .hex-display{
+      margin-left: 25px;
+    }
+   .color-choose{
+      width: 200px;
+    }
+   .hex-display{
+      width: 260px;
+      font-size: 15px;
+    }
+   .delete{
+      font-size: 30px;
+      margin-left: 25px;
+    }
+    .css-output{
+      height: 200px;
+    }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
